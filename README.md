@@ -37,60 +37,94 @@ www.shakil.live → shakil-mdshosen.github.io
 
 Since you want free email for your domain `shakil.live`, here are the best options:
 
-### Option 1: Zoho Mail (Recommended - Completely Free)
+### Option 1: Cloudflare Email Routing (Recommended - 100% Free Forever)
 
 **Features:**
-- 5GB storage per user
-- Up to 5 users free
-- Web interface and mobile apps
-- IMAP/POP3 support
+- Completely free email forwarding service
+- Unlimited email addresses
+- Unlimited email forwarding
+- No storage limits (forwards to your existing email)
+- Easy setup with Cloudflare DNS
+- Professional and reliable
 
 **Setup Steps:**
-1. Sign up at [zoho.com/mail](https://zoho.com/mail)
-2. Choose "Add your existing domain"
-3. Enter `shakil.live`
-4. Verify domain ownership
-5. Add these DNS records at name.com:
+1. Sign up for a free Cloudflare account at [cloudflare.com](https://cloudflare.com)
+2. Add your domain `shakil.live` to Cloudflare (free plan)
+3. Update your nameservers at name.com to Cloudflare's nameservers
+4. In Cloudflare dashboard, go to Email Routing
+5. Enable Email Routing for your domain
+6. Add destination email address (where you want to receive emails)
+7. Create email addresses like `you@shakil.live` and forward them to your existing email
+8. Verify your destination email address
 
-**MX Records:**
-```
-Priority 10: mx.zoho.com
-Priority 20: mx2.zoho.com
-Priority 50: mx3.zoho.com
-```
+**Pros:**
+- Truly free forever
+- Easy to set up
+- Reliable infrastructure
+- Can create unlimited email addresses
 
-**TXT Record for verification:**
-```
-zoho-verification=<verification-code-provided-by-zoho>
-```
+**Cons:**
+- Email forwarding only (can't send from custom domain without additional setup)
+- Need to transfer DNS to Cloudflare
 
-**CNAME Records (optional but recommended):**
-```
-mail.shakil.live → business.zoho.com
-```
+### Option 2: ImprovMX (Free Email Forwarding)
 
-### Option 2: Gmail with Custom Domain (Google Workspace - 14-day free trial, then paid)
+**Features:**
+- Free email forwarding
+- Up to 3 domain aliases on free plan
+- Unlimited email forwards
+- Simple setup
 
-**Note:** Google no longer offers free Gmail with custom domains, but you get a 14-day trial.
+**Setup Steps:**
+1. Sign up at [improvmx.com](https://improvmx.com)
+2. Add your domain `shakil.live`
+3. Add these MX records at name.com:
+   ```
+   Priority 10: mx1.improvmx.com
+   Priority 20: mx2.improvmx.com
+   ```
+4. Create email aliases that forward to your existing email
 
-### Option 3: Email Forwarding (Free but limited)
+**Note:** To send emails from your custom domain, you'll need to configure SMTP with your existing email provider or use the paid plan.
 
-**Setup email forwarding to your existing email:**
+### Option 3: ForwardEmail.net (Free & Open Source)
 
-1. **At name.com (if they offer email forwarding):**
-   - Set up forwarding from `you@shakil.live` to your existing email
-   - Add MX records provided by name.com
-
-2. **Using Cloudflare (Free):**
-   - Transfer DNS management to Cloudflare (free)
-   - Use Cloudflare Email Routing (free email forwarding)
-   - Forward unlimited emails from your domain to existing email addresses
-
-### Option 4: ProtonMail Custom Domain
-- Offers custom domain email
+**Features:**
+- 100% free and open source
+- Unlimited domains and aliases
 - Privacy-focused
-- Has free tier with limitations
-- Paid plans for full custom domain features
+- No tracking or ads
+
+**Setup Steps:**
+1. Sign up at [forwardemail.net](https://forwardemail.net)
+2. Add your domain `shakil.live`
+3. Add these DNS records at name.com:
+   ```
+   MX Records:
+   Priority 10: mx1.forwardemail.net
+   Priority 20: mx2.forwardemail.net
+   
+   TXT Record:
+   forward-email=your-email@example.com
+   ```
+4. Verify your domain
+
+### Option 4: Zoho Mail (Limited Free Tier)
+
+**⚠️ Note:** Zoho Mail's free tier has become more limited and may require payment for custom domain features. Many users report that the free custom domain email service is no longer available for new sign-ups.
+
+**If still available:**
+- Sign up at [zoho.com/mail](https://zoho.com/mail)
+- Check current free tier limitations
+- May require paid plan for custom domain email
+
+### Option 5: Gmail with Custom Domain (Google Workspace - Paid)
+
+**Note:** Google Workspace is now paid-only, starting at $6/user/month. No free tier available for custom domains.
+
+### Option 6: ProtonMail Custom Domain (Paid)
+
+**Note:** ProtonMail requires a paid plan (Mail Plus or higher) for custom domain email. Free tier does not support custom domains.
 
 ## 🚀 Deployment
 
