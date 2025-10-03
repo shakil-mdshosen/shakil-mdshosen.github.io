@@ -139,6 +139,7 @@ To develop locally:
 ### SSL Certificate issues?
 - Wait for DNS propagation before enabling HTTPS
 - GitHub automatically provisions SSL certificates for custom domains
+- **CSR Code Note:** Since you are not using Name.com hosting, you'll need to generate a CSR code through your hosting provider, then copy and paste it into this field (including the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` text). Please contact your hosting provider for specific instructions on generating your CSR code. However, for GitHub Pages, this is **not required** as SSL certificates are automatically provisioned.
 
 ## 📞 Support
 

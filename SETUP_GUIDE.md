@@ -47,6 +47,11 @@ Value: shakil-mdshosen.github.io
 1. Return to GitHub Pages settings
 2. Check **Enforce HTTPS** (only after domain works)
 
+**Note:** GitHub Pages automatically provisions SSL certificates for custom domains. You don't need to generate or provide a CSR code.
+
+**If using Name.com's SSL certificate service:**
+Since you are not using Name.com hosting, you'll need to generate a CSR code through your hosting provider (GitHub Pages in this case), then copy and paste it into the Name.com SSL certificate field (including the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` text). However, **this is not necessary** as GitHub Pages handles SSL certificates automatically. Please contact your hosting provider for specific instructions on generating your CSR code if needed for other purposes.
+
 ## 📧 Free Email Setup (Choose One)
 
 ### Option A: Zoho Mail (Recommended - 100% Free)
